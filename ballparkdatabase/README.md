@@ -1,4 +1,4 @@
-appengine-skeleton
+Ballpark Database
 =============================
 
-This is a generated application from the appengine-skeleton archetype.
+Meant to be a trial thing for google app engine to track ballpark visit statistics.

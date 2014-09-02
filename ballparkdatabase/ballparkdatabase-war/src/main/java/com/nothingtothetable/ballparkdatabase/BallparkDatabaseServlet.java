@@ -1,4 +1,4 @@
-package main.com.nothingtothetable.ballparkdatabase;
+package main.java.com.nothingtothetable.ballparkdatabase;
 
 import java.io.IOException;
 import java.util.Properties;
@@ -8,6 +8,11 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 public class BallparkDatabaseServlet extends HttpServlet {
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -8017395179446030699L; // find out what this is
 
 	@Override
 	  public void doGet(HttpServletRequest req, HttpServletResponse resp)
@@ -19,6 +24,8 @@ public class BallparkDatabaseServlet extends HttpServlet {
 	      p.list(resp.getWriter());
 
 	    } else {
+	    	resp.setContentType("text/plain");
+	    	resp.getWriter().println("Hello, Dan.");
 	      //UserService userService = UserServiceFactory.getUserService();
 	      //User currentUser = userService.getCurrentUser();
 
@@ -31,5 +38,3 @@ public class BallparkDatabaseServlet extends HttpServlet {
 	    }
 	  }
 }
-
-//add comment test

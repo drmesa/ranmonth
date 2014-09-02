@@ -2,10 +2,16 @@
 
 <html>
 	<head>
+		<link type="text/css" rel="stylesheet" href="/stylesheets/main.css"/>
 		Test
 	</head>
 	<body>
 		<p>This is a test!</p>
+		
+		<form action="/ballparkdatabase.jsp" method="get">
+    		<div><input type="text" name="guestbookName" value=""/></div>
+    		<div><input type="submit" value="Switch Guestbook"/></div>
+		</form>
 	</body>
 </html
 

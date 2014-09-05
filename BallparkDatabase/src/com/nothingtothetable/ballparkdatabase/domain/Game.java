@@ -1,11 +1,14 @@
 package com.nothingtothetable.ballparkdatabase.domain;
 
+import java.sql.Timestamp;
+
 public class Game {
 	private int gameSeq;
 	private int homeTeamSeq;
 	private int visitingTeamSeq;
 	private int winningTeamSeq;
 	private int ballparkSeq;
+	private Timestamp startTime;
 	
 	private int losingTeamSeq;
 
@@ -57,12 +60,21 @@ public class Game {
 		this.ballparkSeq = ballparkSeq;
 	}
 
+	public Timestamp getStartTime() {
+		return startTime;
+	}
+
+	public void setStartTime(Timestamp startTime) {
+		this.startTime = startTime;
+	}
+
 	@Override
 	public String toString() {
 		return "Game [gameSeq=" + gameSeq + ", homeTeamSeq=" + homeTeamSeq
 				+ ", visitingTeamSeq=" + visitingTeamSeq + ", winningTeamSeq="
 				+ winningTeamSeq + ", ballparkSeq=" + ballparkSeq
-				+ ", losingTeamSeq=" + losingTeamSeq + "]";
+				+ ", startTime=" + startTime + ", losingTeamSeq="
+				+ losingTeamSeq + "]";
 	}
 
 	@Override

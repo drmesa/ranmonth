@@ -37,13 +37,13 @@ public class LocalData {
 	
 	private void addTeams() {
 		Team marlins = new Team();
-		Team orioles = new Team();
+		Team braves = new Team();
 		marlins.setTeamSeq(1);
-		orioles.setTeamSeq(2);
+		braves.setTeamSeq(2);
 		marlins.setName("Miami Marlins");
-		orioles.setName("Baltimore Orioles");
+		braves.setName("Atlanta Braves");
 		this.teamMap.put(marlins.getTeamSeq(), marlins);
-		this.teamMap.put(orioles.getTeamSeq(), orioles);
+		this.teamMap.put(braves.getTeamSeq(), braves);
 	}
 	
 	private void addBallparks() {

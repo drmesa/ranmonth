@@ -1,4 +1,4 @@
-package com.nothingtothetable.ballparkdatabase;
+/*package com.nothingtothetable.ballparkdatabase;
 
 import java.io.IOException;
 import javax.servlet.http.*;
@@ -13,3 +13,4 @@ public class BallparkDatabaseServlet extends HttpServlet {
 		resp.getWriter().println(database.getTeamMap().get(1).getName());
 	}
 }
+*/

@@ -12,7 +12,7 @@ import org.springframework.web.servlet.ModelAndView;
 @RequestMapping("/ballparkdatabase")
 public class BallparkDatabaseController {
 	private static final Logger LOG = Logger.getLogger("BallparkDatabaseController");
-	String message = "test";
+	String message = "workworkwokr";
 	
 	@RequestMapping(method=RequestMethod.GET)
 	public ModelAndView getToolRoot() {

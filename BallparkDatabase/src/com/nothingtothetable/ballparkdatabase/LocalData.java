@@ -57,9 +57,9 @@ public class LocalData {
 		game.setGameSeq(1);
 		game.setBallparkSeq(1);
 		game.setHomeTeamSeq(1);
-		game.setVisitingTeamSeq(2);
+		game.setAwayTeamSeq(2);
 		game.setLosingTeamSeq(2);
-		game.setWinningTeamSeq(1);
+		game.setOutcomeFlag("H");;
 	}
 
 	public Map<Integer, User> getUserMap() {

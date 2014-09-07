@@ -5,8 +5,8 @@ import java.sql.Timestamp;
 public class Game {
 	private int gameSeq;
 	private int homeTeamSeq;
-	private int visitingTeamSeq;
-	private int winningTeamSeq;
+	private int awayTeamSeq;
+	private String outcomeFlag;
 	private int ballparkSeq;
 	private Timestamp startTime;
 	
@@ -28,20 +28,20 @@ public class Game {
 		this.homeTeamSeq = homeTeamSeq;
 	}
 
-	public int getVisitingTeamSeq() {
-		return visitingTeamSeq;
+	public int getAwayTeamSeq() {
+		return awayTeamSeq;
 	}
 
-	public void setVisitingTeamSeq(int visitingTeamSeq) {
-		this.visitingTeamSeq = visitingTeamSeq;
+	public void setAwayTeamSeq(int awayTeamSeq) {
+		this.awayTeamSeq = awayTeamSeq;
 	}
 
-	public int getWinningTeamSeq() {
-		return winningTeamSeq;
+	public String getOutcomeFlag() {
+		return outcomeFlag;
 	}
 
-	public void setWinningTeamSeq(int winningTeamSeq) {
-		this.winningTeamSeq = winningTeamSeq;
+	public void setOutcomeFlag(String outcomeFlag) {
+		this.outcomeFlag = outcomeFlag;
 	}
 
 	public int getLosingTeamSeq() {
@@ -71,8 +71,8 @@ public class Game {
 	@Override
 	public String toString() {
 		return "Game [gameSeq=" + gameSeq + ", homeTeamSeq=" + homeTeamSeq
-				+ ", visitingTeamSeq=" + visitingTeamSeq + ", winningTeamSeq="
-				+ winningTeamSeq + ", ballparkSeq=" + ballparkSeq
+				+ ", awayTeamSeq=" + awayTeamSeq + ", outcomeFlag="
+				+ outcomeFlag + ", ballparkSeq=" + ballparkSeq
 				+ ", startTime=" + startTime + ", losingTeamSeq="
 				+ losingTeamSeq + "]";
 	}

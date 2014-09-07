@@ -6,6 +6,11 @@
   <packaging>war</packaging>
   <name>BallparkDatabase</name>
   <description>For tracking ballpark visits</description>
+  
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <appengine.target.version>1.9.10</appengine.target.version>
+  </properties>
   <build>
     <sourceDirectory>src</sourceDirectory>
     <resources>
@@ -16,6 +21,7 @@
         </excludes>
       </resource>
     </resources>
+    
     <plugins>
       <plugin>
         <artifactId>maven-compiler-plugin</artifactId>
@@ -38,7 +44,12 @@
             </archive>        
   		</configuration>
 	  </plugin>
-    </plugins>
+      <plugin>
+                  <groupId>com.google.appengine</groupId>
+                  <artifactId>appengine-maven-plugin</artifactId>
+                  <version>${appengine.target.version}</version>
+              </plugin>
+          </plugins>
   </build>
   <dependencies>
   	<dependency>
@@ -90,6 +101,32 @@
   		<groupId>org.springframework</groupId>
   		<artifactId>spring-aop</artifactId>
   		<version>4.0.6.RELEASE</version>
+  	</dependency>
+  	<dependency>
+  		<groupId>com.google.appengine</groupId>
+  		<artifactId>appengine</artifactId>
+  		<version>1.9.10</version>
+  		<type>pom</type>
+  	</dependency>
+  	<dependency>
+  		<groupId>org.mybatis</groupId>
+  		<artifactId>mybatis-spring</artifactId>
+  		<version>1.2.2</version>
+  	</dependency>
+  	<dependency>
+  		<groupId>org.springframework</groupId>
+  		<artifactId>spring-dao</artifactId>
+  		<version>2.0.8</version>
+  	</dependency>
+  	<dependency>
+  		<groupId>org.springframework</groupId>
+  		<artifactId>spring-jdbc</artifactId>
+  		<version>4.0.6.RELEASE</version>
+  	</dependency>
+  	<dependency>
+  		<groupId>mysql</groupId>
+  		<artifactId>mysql-connector-java</artifactId>
+  		<version>5.1.32</version>
   	</dependency>
   </dependencies>
 </project>

@@ -33,12 +33,35 @@
  
 	<bean
 	   class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<property name="viewClass" value="org.springframework.web.servlet.view.JstlView" />
 		<property name="prefix">
 			<value>/WEB-INF/jsp/</value>
 		</property>
 		<property name="suffix">
 			<value>.jsp</value>
 		</property>
+	</bean>
+	
+	<bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+		<property name="driverClassName" value="com.mysql.jdbc.Driver" />
+		<property name="url" value="jdbc:mysql://127.0.0.1:3306/ballparkdb" />
+		<property name="username" value="root" />
+		<property name="password" value="ELcapBSC#108516" />
+	</bean>
+	
+	<bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+	
+	<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+		<property name="dataSource" ref="dataSource" />
+		<property name="configLocation" value="classpath:main/resources/com/nothingtothetable/ballparkdatabase/persistence/mybatis-config.xml" />
+		<property name="typeAliasesPackage" value="com.nothingtothetable.ballparkdatabase.domain" />
+	</bean>
+	
+	<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+		<property name="basePackage" value="com.nothingtothetable.ballparkdatabase.persistence" />
+		<property name="sqlSessionFactoryBeanName" value="sqlSessionFactory" />
 	</bean>
  
 </beans>

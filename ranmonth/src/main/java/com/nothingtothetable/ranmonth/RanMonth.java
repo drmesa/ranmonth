@@ -8,8 +8,8 @@ public class RanMonth
 	public static void main(String[] args)
 	{
 		Random rand = new Random(System.currentTimeMillis());
-		
-		int days = 28;
+		Calendar cal = new Calendar(2015);
+		int days = cal.getDays(Month.FEBRUARY);
 		System.out.println((rand.nextInt(days-1) + 1));
 	}
  

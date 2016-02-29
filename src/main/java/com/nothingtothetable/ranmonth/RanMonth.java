@@ -9,7 +9,7 @@ public class RanMonth
 	{
 		Random rand = new Random(System.currentTimeMillis());
 		Calendar cal = new Calendar(2015);
-		int days = cal.getDays(Month.APRIL);
+		int days = cal.getDays(Month.SEPTEMBER);
 		System.out.println((rand.nextInt(days) + 1));
 	}
  

@@ -7,10 +7,12 @@ public class RanMonth
 
 	public static void main(String[] args)
 	{
+		Month thisMonth = Month.MAY;
 		Random rand = new Random(System.currentTimeMillis());
-		Calendar cal = new Calendar(2016);
-		int days = cal.getDays(Month.MARCH);
-		System.out.println((rand.nextInt(days) + 1));
+		Calendar cal = new Calendar(2019);
+		int days = cal.getDays(thisMonth);
+		int randResult = rand.nextInt(days) + 1;
+		System.out.println("Event should occur on " + randResult + " " + thisMonth.name());
 	}
  
 }

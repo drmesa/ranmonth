@@ -1,4 +1,4 @@
-package com.nothingtothetable.ranmonth;
+package com.nothingtothetable.ranmonth.types;
 
 public class Calendar {
 	private int year;

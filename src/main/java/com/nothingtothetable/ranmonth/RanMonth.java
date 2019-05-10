@@ -1,5 +1,8 @@
 package com.nothingtothetable.ranmonth;
 
+import com.nothingtothetable.ranmonth.types.Calendar;
+import com.nothingtothetable.ranmonth.types.Month;
+
 import java.util.Random;
 
 public class RanMonth

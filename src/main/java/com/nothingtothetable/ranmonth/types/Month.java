@@ -1,4 +1,4 @@
-package com.nothingtothetable.ranmonth;
+package com.nothingtothetable.ranmonth.types;
 
 public enum Month {
 	JANUARY("january", 31),
